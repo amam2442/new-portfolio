@@ -366,12 +366,22 @@
             <div class="section-desc"></div>
           </div>
           <div class="card-wrapper my-gallery">
-
-
             <figure class="card">
-              <!-- <a href="img/works/dammy.jpg" data-size="980x668" class="card-image"> -->
-              <img class="card-image" src="img/works/thumb/portfolio_soejima.png" alt="" />
-              <!-- </a> -->
+              <ul class="ikou">
+                <li class="modal__open ikou2" data-target="target__1">
+                  <img src="img/works/thumb/portfolio_soejima.png">
+                </li>
+              </ul>
+              <div id="target__1" class="modal" style="display: none;">
+                <div class="modal__bg modal__close"></div>
+                <div class="modal__content">
+                  <!-- コンテンツはここに記載 -->
+                  <h3></h3>
+                  <img src="img/works/thumb/portfolio_soejima.png">
+                  <p>text</p>
+                  <a class="modal__close close__text" href="">閉じる</a>
+                </div>
+              </div>
               <figcaption class="card-caption">
                 <p class="card-caption-title">ポートフォリオ</p>
                 <p class="card-caption-info">私自身のポートフォリオを作成しました。<br />jqueryを用いてアニメーションを追加しました</p>

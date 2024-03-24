@@ -1,13 +1,13 @@
 // PhotoSwipe
 initPhotoSwipeFromDOM('.my-gallery');
 
-$(function() {
+$(function () {
 
-  $('figcaption').on('click', 'a', function(e) {
+  $('figcaption').on('click', 'a', function (e) {
     e.stopPropagation();
   });
 
-  $('a[href^="#"]').on('click', function() {
+  $('a[href^="#"]').on('click', function () {
     var speed = 300;
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
@@ -19,7 +19,7 @@ $(function() {
   });
 
   //backToTop
-  $('#backToTop').on('click', function() {
+  $('#backToTop').on('click', function () {
     $('body,html').animate({
       scrollTop: 0
     }, 300);
@@ -32,7 +32,7 @@ $(function() {
   var navHeight = $nav.innerHeight();
   $('.section').css('padding-top', navHeight / 2);
 
-  $(window).on('resize', function() {
+  $(window).on('resize', function () {
     var currentWidth = window.innerWidth;
     if (currentWidth == window.innerWidth) {
       // ウインドウ横幅が変わっていないため処理をキャンセル
@@ -45,7 +45,7 @@ $(function() {
   });
 
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(window).scrollTop() >= offset.top) {
       $nav.addClass('fixed');
       $("#contents").css("margin-top", navHeight);
@@ -54,4 +54,21 @@ $(function() {
       $("#contents").css("margin-top", "0");
     }
   });
+
+  $(function () {
+    $('.modal__open').each(function () {
+      $(this).on('click', function () {
+        var target = $(this).data('target');
+        var modal = document.getElementById(target);
+        console.log(modal)
+        $(modal).fadeIn();
+      });
+    });
+    $('.modal__close').on('click', function () {
+      $('.modal').fadeOut();
+      return false;
+    });
+  });
+
+
 });
