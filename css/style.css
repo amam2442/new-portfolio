@@ -524,6 +524,7 @@ li .ikou2 img {
 .modal__content img {
   width: 70%;
   height: auto;
+  margin: auto;
 }
 
 .modal .close__text {
