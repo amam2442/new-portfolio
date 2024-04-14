@@ -32,28 +32,28 @@ $(function () {
   var navHeight = $nav.innerHeight();
   $('.section').css('padding-top', navHeight / 2);
 
-  $(window).on('resize', function () {
-    var currentWidth = window.innerWidth;
-    if (currentWidth == window.innerWidth) {
-      // ウインドウ横幅が変わっていないため処理をキャンセル
-      return;
-    }
-    $nav = $('#gnav');
-    offset = $nav.offset();
-    navHeight = $nav.innerHeight();
-    $('.section').css('padding-top', navHeight / 2);
-  });
+  // $(window).on('resize', function () {
+  //   var currentWidth = window.innerWidth;
+  //   if (currentWidth == window.innerWidth) {
+  //     // ウインドウ横幅が変わっていないため処理をキャンセル
+  //     return;
+  //   }
+  //   $nav = $('#gnav');
+  //   offset = $nav.offset();
+  //   navHeight = $nav.innerHeight();
+  //   $('.section').css('padding-top', navHeight / 2);
+  // });
 
 
-  $(window).scroll(function () {
-    if ($(window).scrollTop() >= offset.top) {
-      $nav.addClass('fixed');
-      $("#contents").css("margin-top", navHeight);
-    } else {
-      $nav.removeClass('fixed');
-      $("#contents").css("margin-top", "0");
-    }
-  });
+  // $(window).scroll(function () {
+  //   if ($(window).scrollTop() >= offset.top) {
+  //     $nav.addClass('fixed');
+  //     $("#contents").css("margin-top", navHeight);
+  //   } else {
+  //     $nav.removeClass('fixed');
+  //     $("#contents").css("margin-top", "0");
+  //   }
+  // });
 
   $(function () {
     $('.modal__open').each(function () {

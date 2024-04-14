@@ -305,7 +305,9 @@ Resources
 #gnav {
   padding: 10px;
   font-family: 'Open sans', sans-serif;
-  z-index: 100;
+  z-index: 1000;
+  position: fixed;
+  position: relative;
 }
 
 #gnav ul {
